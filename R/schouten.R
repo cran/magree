@@ -21,7 +21,7 @@ schouten <- function(X,weights=c("unweighted","linear","quadratic","user"),w=NUL
     data2 <- matrix(as.integer(as.factor(matX)),N,M)
     raterNames <- colnames(X)
     itemNames <- rownames(X)
-    out <- .Fortran("schouten",
+    out <- .Fortran("schoutenf",
                     N=as.integer(N),
                     M=as.integer(M),
                     L=as.integer(L),
@@ -50,7 +50,8 @@ schouten <- function(X,weights=c("unweighted","linear","quadratic","user"),w=NUL
                     var0kab=array(0.0,c(M,M)),
                     var0ka=rep(0.0,M),
                     var0k=0.0,
-                    wab=array(0.0,c(M,M)))
+                    wab=array(0.0,c(M,M)),
+                    PACKAGE="magree")
     out$pchi <- pchisq(out$chi,df=1,lower.tail=FALSE)
     dimnames(out$pab) <- dimnames(out$qab) <- list(raterNames,raterNames,score.labels,score.labels)
     dimnames(out$pa) <- list(raterNames,score.labels,score.labels)

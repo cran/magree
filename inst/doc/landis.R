@@ -1,5 +1,4 @@
 ### R code from vignette source 'landis.Rnw'
-### Encoding: UTF-8
 
 ###################################################
 ### code chunk number 1: landis.Rnw:44-47
@@ -54,17 +53,17 @@ data.frame(SlideType=1:18,
 ###################################################
 ### code chunk number 5: landis.Rnw:92-97
 ###################################################
-oconnell(landis==1)
-oconnell(landis==2)
-oconnell(landis==3)
-oconnell(landis==4)
-oconnell(landis==5)
+magree(landis==1)
+magree(landis==2)
+magree(landis==3)
+magree(landis==4)
+magree(landis==5)
 
 
 ###################################################
 ### code chunk number 6: landis.Rnw:101-103
 ###################################################
-fit2 <- schouten(landis)
+fit2 <- magree(landis)
 summary(fit2)
 
 

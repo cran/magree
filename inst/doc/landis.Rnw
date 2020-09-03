@@ -1,4 +1,4 @@
-%\VignetteIndexEntry{O'Connell-Dobson estimators of agreement applied to data from Landis and Koch (1976)}
+%\VignetteIndexEntry{O'Connell-Dobson estimators of agreement applied to Landis and Koch (1976)}
 %\VignetteDepends{magree}
 %\VignettePackage{magree}
 %!\SweaveUTF8
@@ -8,7 +8,7 @@
 \usepackage{amsmath,amsfonts,enumitem}
 \usepackage[utf8]{inputenc}
 
-\title{O'Connell-Dobson-Schouten estimators of agreement applied to data from Landis and Koch (1976)}
+\title{O'Connell-Dobson-Schouten estimators of agreement applied to Landis and Koch (1976)}
 
 \author{Mark~Clements\\Karolinska Institutet}
 
@@ -36,7 +36,7 @@
 
 O'Connell and Dobson (1984) and Schouten (1982) provide a technical discussion on the statistical properties of averaged measures of agreement, particularly un-weighted and weighted kappa statistics that adjust for the probability of chance agreement. Such measures of agreement are common for studies of multi-rater agreement with nominal or ordinal variables. We have adapted the Fortran code from the 1984 paper by O'Connell and Dobson for use in R and implemented the algorithms described by Schouten (1982) in Fortran. In the following, we apply the resulting package to the dataset analysed in both articles. We propose that the O'Connell-Dobson-Schouten estimators are valuable and encourage their broader use.
 
-Landis and Koch (Biometrics 1977; 33: 363--374) provide a dataset on inter-rater agreement by seven pathologists for classifying carcinoma in situ for uterine cancer. The data are included in the \pkg{oconnell} package as the \code{landis} data, which is a matrix.
+Landis and Koch (Biometrics 1977; 33: 363--374) provide a dataset on inter-rater agreement by seven pathologists for classifying carcinoma in situ for uterine cancer. The data are included in the \pkg{magree} package as the \code{landis} data, which is a matrix.
 
 After loading the package, we can produce summary statistics for \code{i=1}, which is the un-weighted analysis, for the linear weights (\code{i=2}) or for quadratic weights (\code{i=3}). The summary statistics include marginal summaries and $\hat{S}_{av}$ for each slide.
 
@@ -90,16 +90,16 @@ data.frame(SlideType=1:18,
 which follows part of Table 2. Finally, Table 5 from O'Connell and Dobson (1984) can be easily reproduced by dichotomising the outcomes:
 
 <<>>=
-oconnell(landis==1)
-oconnell(landis==2)
-oconnell(landis==3)
-oconnell(landis==4)
-oconnell(landis==5)
+magree(landis==1)
+magree(landis==2)
+magree(landis==3)
+magree(landis==4)
+magree(landis==5)
 @
 
 We can also compare the raters using the results due to Schouten (1982). 
 <<>>=
-fit2 <- schouten(landis)
+fit2 <- magree(landis)
 summary(fit2)
 @ 
 

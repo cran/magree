@@ -1,6 +1,6 @@
-useDynLib("magree")
-exportPattern("^[[:alpha:]]+")
-## export(magree,oconnell,schouten)
+useDynLib("magree", .registration=TRUE)
+# exportPattern("^[[:alpha:]]+")
+export(magree,oconnell,schouten)
 exportMethods(plot,summary,print)
 
 importFrom("graphics", "axis", "box", "matplot", "points", "segments", "plot")

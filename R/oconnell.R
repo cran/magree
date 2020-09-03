@@ -59,13 +59,13 @@ oconnell <- function(X, weights=c("unweighted","linear","quadratic"), i=NULL, sc
     ## NOTE: resp is X -> factor -> integer -> matrix -> transpose
     resp <- t(matrix(as.integer(as.factor(matX)),nrow(X),ncol(X)))
     nscore <- length(score)
-    out <- .Fortran("oconnell", nrater=nrater, nsubj=nsubj, nscore=nscore, i=as.integer(i),
+    out <- .Fortran("oconnellf", nrater=nrater, nsubj=nsubj, nscore=nscore, i=as.integer(i),
                     resp=resp, s1=rep(0,nsubj), s2=rep(0,nsubj),
                     p1=matrix(0,nrater,nscore),p2=rep(0,nscore),w1=matrix(0,nrater,nscore),
                     w2=matrix(0,nrater,nscore),
                     score=as.double(score),delta=matrix(0,nrater,nrater),
                     d=rep(0,nsubj),expd1=0,expd2=0,dbar=0,vars1=0,var0s1=0,vsav1=0,v0sav1=0,
-                    vars2=0,var0s2=0,vsav2=0,v0sav2=0,sav1=0,sav2=0)
+                    vars2=0,var0s2=0,vsav2=0,v0sav2=0,sav1=0,sav2=0, PACKAGE="magree")
     colnames(out$resp) <- names(out$s1) <- names(out$s2) <- names(out$d) <- itemNames
     rownames(out$resp) <- rownames(out$p1) <- rownames(out$w1) <- rownames(out$w2) <- rownames(out$delta) <- colnames(out$delta) <- raterNames
     colnames(out$p1) <- names(out$p2) <- colnames(out$w1) <- names(score) <- score.labels
