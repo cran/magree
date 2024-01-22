@@ -17,7 +17,7 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{object}{
-%%     ~~Describe \code{obj} here~~
+object to summarise
 }
   \item{ci.transform}{transformation used to calculate the confidence
     intervals. Either "logit" for a logit transform or "identity" for no transform.
@@ -27,7 +27,7 @@
 %%     ~~Describe \code{ci.p} here~~
 }
   \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+unused additional arguments
 }
 }
 %% \details{

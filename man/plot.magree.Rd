@@ -27,13 +27,13 @@ main = NULL, xdelta = 0.1, axes = TRUE, ...)
 %%     ~~Describe \code{type} here~~
 }
   \item{xlab}{
-%%     ~~Describe \code{xlab} here~~
+x-axis label
 }
   \item{ylab}{
-%%     ~~Describe \code{ylab} here~~
+y-axis label
 }
   \item{main}{
-%%     ~~Describe \code{main} here~~
+    main label
 }
   \item{xdelta}{For plot.schouten and "kappa by observer", specifies the width of
     the brackets for the confidence intervals.
@@ -43,7 +43,7 @@ main = NULL, xdelta = 0.1, axes = TRUE, ...)
 Bool for whether to plot the axes.
 }
   \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+other arguments passed to \code{plot}
 }
 }
 %% \details{

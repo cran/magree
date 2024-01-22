@@ -2,8 +2,8 @@ Package: magree
 Type: Package
 Title: Implements the O'Connell-Dobson-Schouten Estimators of Agreement
         for Multiple Observers
-Version: 1.1
-Date: 2020-09-02
+Version: 1.2
+Date: 2024-01-22
 Depends: graphics
 Author: Mark Clements, Dianne O'Connell
 Maintainer: Mark Clements <mark.clements@ki.se>
@@ -11,6 +11,6 @@ Description: Implements an interface to the legacy Fortran code from O'Connell a
 License: GPL-3 | GPL-2
 LazyData: yes
 NeedsCompilation: yes
-Packaged: 2020-09-02 22:21:11 UTC; marcle
+Packaged: 2024-01-22 18:43:50 UTC; marcle
 Repository: CRAN
-Date/Publication: 2020-09-03 04:10:02 UTC
+Date/Publication: 2024-01-22 19:00:03 UTC

@@ -105,12 +105,11 @@ print.oconnell <- function(x, ...) {
                 x$sav2,
                 sqrt(x$vsav2),
                 x$ci2[1],
-                x$ci2[2],
-                ...))
+                x$ci2[2]))
     cat(sprintf("Pr(Overall agreement due to chance | hetero):\t%s\n",
-                format.pval(x$p0sav1), ...))
+                format.pval(x$p0sav1)))
     cat(sprintf("Pr(Overall agreement due to chance | homoge):\t%s\n",
-                format.pval(x$p0sav2), ...))
+                format.pval(x$p0sav2)))
     invisible(x)
 }
 

@@ -17,10 +17,11 @@
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{x}{
-%%     ~~Describe \code{obj} here~~
+summary object
 }
   \item{\dots}{
-%%     ~~Describe \code{\dots} here~~
+    other arguments passed to \code{print.oconnell}, which is passed to
+    summary (if x is not already a summary object).
 }
 }
 %% \details{

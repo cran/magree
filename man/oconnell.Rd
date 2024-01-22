@@ -42,7 +42,7 @@ A matrix or data-frame with observations/subjects as rows and observers as colum
 }
   \item{score}{
     The scores that are to be assigned to the categories. Currently,
-    this defaults to \code{1:L}, where code{L} is the number of categories.
+    this defaults to \code{1:L}, where \code{L} is the number of categories.
 }
 }
 \details{
